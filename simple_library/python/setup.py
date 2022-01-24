@@ -5,6 +5,7 @@ from Cython.Build import cythonize
 # setuptools.setup calls it automatically if Cython is installed
 setup(
     name='cx',
+    version='0.0.1',
     ext_modules=cythonize(
         Extension(
             'cx',
@@ -12,5 +13,6 @@ setup(
 	    include_dirs=['../../cpp/'],
 	    language='c++',
         )
-    )
+    ),
+    install_requires=['cython', 'numpy'],
 )
